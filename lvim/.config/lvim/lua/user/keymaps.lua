@@ -37,7 +37,8 @@ lvim.builtin.which_key.mappings["k"] = {
   r = { 'zg', 'rigth' },
   w = { 'zw', 'wrong' },
   b = { 'zw', 'bad' },
-  l = { name = 'run',
+  l = {
+    name = 'run',
     s = { '<cmd>set spelllang=es<CR>', 'set Spanish' },
     e = { '<cmd>set spelllang=en<CR>', 'set English' },
   },
@@ -62,7 +63,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 lvim.builtin.which_key.mappings["o"] = {
   name = 'otter',
-  a = { require'otter'.dev_setup, 'activate' },
+  a = { require 'otter'.dev_setup, 'activate' },
 }
 
 lvim.builtin.which_key.mappings["Q"] = {
@@ -71,7 +72,8 @@ lvim.builtin.which_key.mappings["Q"] = {
   p = { ":lua require'quarto'.quartoPreview()<cr>", 'preview' },
   q = { ":lua require'quarto'.quartoClosePreview()<cr>", 'close' },
   h = { ":QuartoHelp ", 'help' },
-  r = { name = 'run',
+  r = {
+    name = 'run',
     r = { ':QuartoSendAbove<cr>', 'to cursor' },
     a = { ':QuartoSendAll<cr>', 'all' },
   },
@@ -79,6 +81,22 @@ lvim.builtin.which_key.mappings["Q"] = {
   E = { ":lua require'otter'.export(true)<cr>", 'export overwrite' },
 }
 
+lvim.builtin.which_key.mappings["Z"] = {
+  name = "ChatGPT",
+  c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
+  e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
+  g = { "<cmd>ChatGPTRun grammar_correction<CR>", "Grammar Correction", mode = { "n", "v" } },
+  t = { "<cmd>ChatGPTRun translate<CR>", "Translate", mode = { "n", "v" } },
+  k = { "<cmd>ChatGPTRun keywords<CR>", "Keywords", mode = { "n", "v" } },
+  d = { "<cmd>ChatGPTRun docstring<CR>", "Docstring", mode = { "n", "v" } },
+  a = { "<cmd>ChatGPTRun add_tests<CR>", "Add Tests", mode = { "n", "v" } },
+  o = { "<cmd>ChatGPTRun optimize_code<CR>", "Optimize Code", mode = { "n", "v" } },
+  s = { "<cmd>ChatGPTRun summarize<CR>", "Summarize", mode = { "n", "v" } },
+  f = { "<cmd>ChatGPTRun fix_bugs<CR>", "Fix Bugs", mode = { "n", "v" } },
+  x = { "<cmd>ChatGPTRun explain_code<CR>", "Explain Code", mode = { "n", "v" } },
+  r = { "<cmd>ChatGPTRun roxygen_edit<CR>", "Roxygen Edit", mode = { "n", "v" } },
+  l = { "<cmd>ChatGPTRun code_readability_analysis<CR>", "Code Readability Analysis", mode = { "n", "v" } },
+}
 -- vim.opt.spelllang = {en_us, es}
 -- lvim.keys.normal_mode['coo'] = { 'o# %%<cr>', 'new code chunk below' }
 -- lvim.keys.normal_mode['cOo'] = { 'O# %%<cr>', 'new code chunk above' }

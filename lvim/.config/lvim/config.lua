@@ -2,8 +2,8 @@ reload "user.options"
 reload "user.keymaps"
 reload "user.plugins"
 reload "user.python"
-reload 'user.quarto'
-
+-- reload 'user.quarto'
+reload 'user.latex'
 -- -- always installed on startup, useful for parsers without a strict filetype
 -- lvim.builtin.treesitter.ensure_installed = { "comment", "python" }
 
